@@ -1,0 +1,231 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>
+    {% if info %}
+      {{info.title}}
+    {% endif %}
+  </title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link href="{% static "css/materialize.css" %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static "css/style.css" %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+</head>
+<body>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">
+        {% if info %}
+          <img width="100" src=" {{ info.logo.url }} ">
+        {% endif %}
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li><a target="_blank" href="mailto:info@storm.coffee" class="waves-effect waves-light btn primary-bg nav-btn modal-trigger"><i class="material-icons left">email</i>Contact Us</a></li>
+        <li><a class="waves-effect waves-light btn primary-bg" href="https://g.page/storm-in-a-coffee-pot?share" target="_blank"><i class="material-icons left">location_on</i>Get Directions</a></li>
+        
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="mailto:info@storm.coffee" target="_blank">Contact Us</a></li>
+        <li><a target="_blank" href="https://g.page/storm-in-a-coffee-pot?share">Get Directions</a></li>
+
+      </ul>
+
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+      
+        <div class="col s12 m12 center logo-image">
+            {% if info %}
+              <img  src=" {{info.logo.url}}"> 
+            {% endif %}
+            <div class="">
+              <h5 class="cursive-heading">Cafe in Munich</h5>
+            </div>
+            {% if hour > 9 %}
+            <strong>Closes at 5pm</strong>
+            <p> Closes at 5 pm </p>
+            {% else %}
+            <strong>Opens at 9am</strong>
+            {% comment %} <p> Opens at 9 am </p> {% endcomment %}
+            {% endif %}
+          </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container row">
+    <div class="section slider">
+      
+      <div class="carousel carousel-slider img-container">
+        {% for image in images %}
+        <!-- <a class="carousel-item" ><img class="slider-img" src="images/3.jpg"></a> -->
+        <a class="carousel-item" ><img src="{{ image.slider_image.url }}"></a>
+        <!-- <a class="carousel-item" ><img src="images/5.jpg"></a>
+        <a class="carousel-item" ><img src="images/4.jpg"></a>
+        <a class="carousel-item" ><img src="images/1.jpg"></a> -->
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <div class="center heading">
+        <h4 class="cursive-heading">Why Storm Coffee</h4>
+      </div>
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><span class="material-icons">
+bakery_dining
+</span></h2>
+            <h5 class="center">Fresh and Delicious Baked Items</h5>
+
+            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">Peaceful Environment</h5>
+
+            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><span class="material-icons">
+coffee_maker
+</span></h2>
+            <h5 class="center">Vast Range of Coffees</h5>
+
+            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="container row">
+    <div class="section">
+      <div class="center heading">
+        <h4 class="cursive-heading">Our Location</h4>
+      </div>
+
+      <div class="row">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2663.4367992760504!2d11.55858851512362!3d48.121099260288354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e75eb67b769a7%3A0x75bed7038a1fa3ca!2sStorm%20in%20a%20Coffeepot!5e0!3m2!1sen!2snp!4v1654580419607!5m2!1sen!2snp" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col m8 s12">
+          <h5 class="white-text">Address</h5>
+          <span>Ehrengutstraße 18 </span><br>
+          <span>80469 München, Germany</span><br>
+          
+          <a href="https://g.page/storm-in-a-coffee-pot?share" target="_blank" class="btn-large waves-effect waves-light secondary-bg">Get Directions</a>
+          
+
+        </div>
+        <div class="col m4 s12 hours">
+          <h5 class="white-text">Opening hours</h5>
+          <table>
+            <tr>
+              <td>Monday: </td>
+              <td>09:00–17:00 </td>              
+            </tr>
+
+            <tr>
+              <td>Tuesday: </td>
+              <td>09:00–17:00 </td>              
+            </tr>
+
+            <tr>
+              <td>Wednesday: </td>
+              <td>09:00–17:00 </td>              
+            </tr>
+
+            <tr>
+              <td>Thursday: </td>
+              <td>09:00–17:00 </td>              
+            </tr>
+
+            <tr>
+              <td>Friday: </td>
+              <td>09:00–17:00 </td>              
+            </tr>
+
+            <tr>
+              <td>Saturday: </td>
+              <td>09:00–17:00 </td>              
+            </tr>
+
+            <tr>
+              <td>Sunday: </td>
+              <td>Closed </td>              
+            </tr>
+          </table>
+        </div>
+        
+      </div>
+    </div>
+    <div class="footer-copyright">
+      
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="{% static "js/materialize.js" %}"></script>
+  <script src="{% static "js/init.js" %}"></script>
+
+  <script type="text/javascript">
+    
+  $('.carousel.carousel-slider').carousel({
+    dist: 100,
+    transition: 1000,
+  });
+  var autoplay = true;
+
+  setInterval(function() { 
+      if(autoplay) $('.carousel.carousel-slider').carousel('next');
+  }, 4000);
+
+  $('.carousel.carousel-slider').hover(function(){ 
+       autoplay = false; 
+  }, function(){ 
+       autoplay = true; 
+  });      
+
+
+
+  </script>
+
+  </body>
+</html>

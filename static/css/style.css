@@ -1,0 +1,208 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+html{
+  color: #433f3e ;
+}
+
+
+/*nav ul a,
+nav .brand-logo {
+  color: #444;
+}*/
+
+.primary{color: #433f3e;}
+.secondary{color: #262523;}
+
+.primary-bg{background-color: #433f3e;}
+.secondary-bg{background-color: #262523;}
+
+.center{text-align: center;}
+.cursive-heading{
+  font-family: 'Dancing Script', cursive;
+  font-size: 38px;
+  
+}
+
+.heading-border{
+  border-bottom: 1px solid #262523;
+  border-bottom-width: 10%;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 400px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+
+  .sidenav{
+    width: 60%;
+  }
+
+  nav{
+    height: auto !important;
+  }
+
+  nav .brand-logo{
+    display: none;
+  }
+
+
+}
+
+.sidenav li > a:hover{
+  background-color: #262523;
+  color: #fff;
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+
+  .sidenav{
+    width: 60%;
+  }
+
+  .logo-image img{
+    width: 150px;
+    height: auto;
+  }
+
+
+  .logo-image h5{
+    font-size: medium;
+    padding-bottom: 0;
+  }
+  .logo-image strong{
+    font-weight: bolder;
+  }
+}
+
+.logo-image strong{
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+nav{
+  height: 150px;
+  box-shadow: 0 2px 2px 0 rgba(67, 63, 62, 0.20);
+
+}
+
+nav img{padding-top: 25px;}
+
+nav ul{
+  margin-top: 3%;
+}
+nav ul li a{
+  text-transform: uppercase;
+}
+
+
+nav ul .btn:hover{
+  background-color: #262523;
+}
+
+
+.heading{
+  margin: 30px 0;
+}
+
+.nav-icon{
+  margin-top: 15px;
+}
+.img-container img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.slider{
+  margin-bottom: 120px;
+}
+
+.carousel{
+  height: 500px;
+}
+
+iframe{
+  width: 100%;
+}
+
+
+.page-footer{
+  background-color: #433f3e !important;
+}
+
+.page-footer .btn-large{
+  margin-top: 20px;
+  
+}
+.page-footer .btn-large:hover{
+  background-color: #262523;
+  
+}
+
+.hours table tr{border: none;}
+
+.hours table td{
+  padding: 5px 5px 5px 0px;
+}
+
+.contact-form{
+  /* padding: 2%; */
+  width: 60%;
+  max-height: unset;
+}
+
+.input-field input, .input-field textarea{
+  margin-top: 2%;
+  border: none;
+}
+
+
+.full_name, .email, .message{
+  margin-top: 2%;
+  border: none;
+}
+form .btn, form .btn:hover{
+  background-color: #262523;
+}
